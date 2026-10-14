@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "imie": "Łukasz",
+        "nazwisko": "Żółć",
+        "miasto": "Łódź",
+        "ulubiony_napoj": "kawa",
+        "notatka": "Zażółć gęślą jaźń"
+    },
+    {
+        "id": "2",
+        "imie": "Małgorzata",
+        "nazwisko": "Wiśniewska",
+        "miasto": "Gdańsk",
+        "ulubiony_napoj": "herbata",
+        "notatka": "Cześć, jak leci?"
+    },
+    {
+        "id": "3",
+        "imie": "François",
+        "nazwisko": "Dupont",
+        "miasto": "Lyon",
+        "ulubiony_napoj": "espresso",
+        "notatka": "Crème brûlée"
+    },
+    {
+        "id": "4",
+        "imie": "Søren",
+        "nazwisko": "Kierkegaard",
+        "miasto": "Kopenhaga",
+        "ulubiony_napoj": "kawa",
+        "notatka": "Smørrebrød i hygge"
+    },
+    {
+        "id": "5",
+        "imie": "İpek",
+        "nazwisko": "Yılmaz",
+        "miasto": "İstanbul",
+        "ulubiony_napoj": "çay",
+        "notatka": "Türkçe: ş, ğ, ı, İ"
+    },
+    {
+        "id": "6",
+        "imie": "Алексей",
+        "nazwisko": "Иванов",
+        "miasto": "Москва",
+        "ulubiony_napoj": "чай",
+        "notatka": "Привет, мир!"
+    },
+    {
+        "id": "7",
+        "imie": "李",
+        "nazwisko": "小龍",
+        "miasto": "Hongkong",
+        "ulubiony_napoj": "herbata",
+        "notatka": "你好，世界"
+    },
+    {
+        "id": "8",
+        "imie": "😀",
+        "nazwisko": "Testowy",
+        "miasto": "Opole",
+        "ulubiony_napoj": "",
+        "notatka": "Emoji 🚄 oraz puste pole napoju"
+    },
+    {
+        "id": "9",
+        "imie": "Ana",
+        "nazwisko": "Nowak",
+        "miasto": "Wrocław",
+        "ulubiony_napoj": "woda",
+        "notatka": ""
+    },
+    {
+        "id": "10",
+        "imie": "José",
+        "nazwisko": "García",
+        "miasto": "Madryt",
+        "ulubiony_napoj": "café con leche",
+        "notatka": "mañana, corazón"
+    }
+]
