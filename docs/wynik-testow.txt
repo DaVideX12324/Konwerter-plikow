@@ -1,0 +1,28 @@
+test_csv_targets (test_converters.TestAvailableTargets.test_csv_targets) ... ok
+test_docx_targets (test_converters.TestAvailableTargets.test_docx_targets) ... ok
+test_json_targets (test_converters.TestAvailableTargets.test_json_targets) ... ok
+test_missing_extension (test_converters.TestAvailableTargets.test_missing_extension) ... ok
+test_unsupported_extension (test_converters.TestAvailableTargets.test_unsupported_extension) ... ok
+test_uppercase_extension (test_converters.TestAvailableTargets.test_uppercase_extension) ... ok
+test_duplicate_headers (test_converters.TestCsvCheck.test_duplicate_headers) ... ok
+test_empty_column_name (test_converters.TestCsvCheck.test_empty_column_name) ... ok
+test_empty_value (test_converters.TestCsvCheck.test_empty_value) ... ok
+test_extra_field (test_converters.TestCsvCheck.test_extra_field) ... ok
+test_headers_only (test_converters.TestCsvCheck.test_headers_only) ... ok
+test_missing_field (test_converters.TestCsvCheck.test_missing_field) ... ok
+test_missing_headers (test_converters.TestCsvCheck.test_missing_headers) ... ok
+test_valid_csv (test_converters.TestCsvCheck.test_valid_csv) ... ok
+test_whitespace_column_name (test_converters.TestCsvCheck.test_whitespace_column_name) ... ok
+test_csv_to_json (test_converters.TestCsvJsonConversion.test_csv_to_json) ... ok
+test_csv_to_json_rejects_extra_field (test_converters.TestCsvJsonConversion.test_csv_to_json_rejects_extra_field) ... ok
+test_json_to_csv (test_converters.TestCsvJsonConversion.test_json_to_csv) ... ok
+test_input_equals_output (test_converters.TestValidatePaths.test_input_equals_output) ... ok
+test_missing_input (test_converters.TestValidatePaths.test_missing_input) ... ok
+test_missing_output_directory (test_converters.TestValidatePaths.test_missing_output_directory) ... ok
+test_output_is_directory (test_converters.TestValidatePaths.test_output_is_directory) ... ok
+test_valid_paths (test_converters.TestValidatePaths.test_valid_paths) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.031s
+
+OK

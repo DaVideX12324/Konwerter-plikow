@@ -1,1 +1,10 @@
-/src/__pycache__
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+.pytest_cache/
+output/*
+!output/.gitkeep
+.conversion-*/
+.venv*/
