@@ -2,6 +2,7 @@ import argparse
 from pathlib import Path
 import shlex
 import logging
+import csv
 
 import converters
 
@@ -40,9 +41,7 @@ def choose_output_path(output_file_path: Path) -> Path | None:
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Konwerter plików."
-    )
+    parser = argparse.ArgumentParser(description="Konwerter plików.")
 
     parser.add_argument("input_file", nargs="?")
     parser.add_argument("output_file", nargs="?")
