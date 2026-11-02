@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 import shlex
+import logging
 
 import converters
 
@@ -8,6 +9,34 @@ import converters
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 OUTPUT_DIR = PROJECT_ROOT / "output"
+
+def choose_output_path(output_file_path: Path) -> Path | None:
+    if output_file_path.is_dir():
+        raise IsADirectoryError(f"Ścieżka wyjściowa wskazuje katalog: {output_file_path}")
+
+    if not output_file_path.exists():
+        return output_file_path
+
+    while True:
+        answer = input(f"Plik {output_file_path.name} już istnieje. [n]adpisz / [z]mień nazwę / [a]nuluj: ").strip().lower()
+
+        if answer in ("n", "nadpisz"):
+            return output_file_path
+
+        if answer in ("z", "zmień", "zmien"):
+            number = 1
+            candidate = output_file_path.with_name(f"{output_file_path.stem} ({number}){output_file_path.suffix}")
+
+            while candidate.exists():
+                number += 1
+                candidate = output_file_path.with_name(f"{output_file_path.stem} ({number}){output_file_path.suffix}")
+
+            return candidate
+
+        if answer in ("a", "anuluj"):
+            return None
+
+        print("Wpisz n, z lub a.")
 
 
 def main():
@@ -97,14 +126,16 @@ def main():
         try:
             output_path.parent.mkdir(parents=True, exist_ok=True)
 
-            result = converters.convert(
-                input_path,
-                output_path,
-            )
+            selected_path = choose_output_path(output_path)
 
-            print(f"Utworzono plik: {result}")
+            if selected_path is None:
+                print("Anulowano konwersję.")
+            else:
+                result = converters.convert(input_path, selected_path)
+                print(f"Utworzono plik: {result}")
 
-        except (ValueError, OSError) as error:
+        except (ValueError, OSError, RuntimeError, csv.Error) as error:
+            logging.exception("Błąd konwersji: %s -> %s", input_path, output_path)
             print(f"Błąd: {error}")
 
         if not interactive_mode or not ask_next_conversion():
@@ -145,4 +176,5 @@ def show_available_files():
 
 
 if __name__ == "__main__":
+    logging.basicConfig(filename=PROJECT_ROOT / "converter.log", encoding="utf-8", level=logging.WARNING, format="%(asctime)s | %(levelname)s | %(message)s")
     main()
